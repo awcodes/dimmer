@@ -1,6 +1,6 @@
 {
     "name": "awcodes/dimmer",
-    "description": "This is my package dimmer",
+    "description": "Dimmer is a simple package to easily add a light/dark/system mode switcher to your Laravel app.",
     "keywords": [
         "Awcodes",
         "laravel",
