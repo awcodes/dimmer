@@ -31,8 +31,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Awcodes\\Dimmer\\": "src/",
-            "Awcodes\\Dimmer\\Database\\Factories\\": "database/factories/"
+            "Awcodes\\Dimmer\\": "src/"
         }
     },
     "autoload-dev": {
@@ -70,10 +69,7 @@
         "laravel": {
             "providers": [
                 "Awcodes\\Dimmer\\DimmerServiceProvider"
-            ],
-            "aliases": {
-                "Dimmer": "Awcodes\\Dimmer\\Facades\\Dimmer"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",

@@ -1,19 +1,14 @@
-# This is my package dimmer
+# Dimmer
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/awcodes/dimmer.svg?style=flat-square)](https://packagist.org/packages/awcodes/dimmer)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/awcodes/dimmer/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/awcodes/dimmer/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/awcodes/dimmer/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/awcodes/dimmer/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/awcodes/dimmer.svg?style=flat-square)](https://packagist.org/packages/awcodes/dimmer)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Dimmer is a simple package to easily add a light/dark/system mode switcher to your Laravel app.
 
-## Support us
+## Requirements
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/dimmer.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/dimmer)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+- Alpine JS
+- Tailwind CSS
 
 ## Installation
 
@@ -23,37 +18,40 @@ You can install the package via composer:
 composer require awcodes/dimmer
 ```
 
-You can publish and run the migrations with:
+Next, you need to add the views to your `tailwind.config.js` file:
 
-```bash
-php artisan vendor:publish --tag="dimmer-migrations"
-php artisan migrate
+```js
+content: [
+    './vendor/awcodes/dimmer/resources/views/**/*.blade.php',
+]
 ```
 
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="dimmer-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
+Optionally (not recommended), you can publish the views using
 
 ```bash
 php artisan vendor:publish --tag="dimmer-views"
 ```
 
+You can also update the translations by publishing the lang files:
+
+```bash
+php artisan vendor:publish --tag="dimmer-translations"
+```
+
 ## Usage
 
-```php
-$dimmer = new Awcodes\Dimmer();
-echo $dimmer->echoPhrase('Hello, Awcodes!');
+Just include the `dimmer` component in your layout or anywhere you would to use it.
+
+```html
+<x-dimmer::controls />
+```
+
+### Forcing a default mode
+
+Should you wish to force a default mode for when a user first visits the site, you can do so by setting the `force-mode` attribute on the `dimmer` component. Without this attribute set, the default mode will be determined by the user's system preferences.
+
+```html
+<x-dimmer::controls force-mode="dark" />
 ```
 
 ## Testing
