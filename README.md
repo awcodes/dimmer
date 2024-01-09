@@ -3,6 +3,8 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/awcodes/dimmer.svg?style=flat-square)](https://packagist.org/packages/awcodes/dimmer)
 [![Total Downloads](https://img.shields.io/packagist/dt/awcodes/dimmer.svg?style=flat-square)](https://packagist.org/packages/awcodes/dimmer)
 
+![dimmer](https://github.com/awcodes/dimmer/assets/3596800/88aeda63-7ad3-448c-b6d5-526c5620747f)
+
 Dimmer is a simple package to easily add a light/dark/system mode switcher to your Laravel app.
 
 ## Requirements
