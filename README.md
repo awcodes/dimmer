@@ -12,6 +12,8 @@ Dimmer is a simple package to easily add a light/dark/system mode switcher to yo
 - Alpine JS
 - Tailwind CSS
 
+<!-- [docs_start] -->
+
 ## Installation
 
 You can install the package via composer:
@@ -55,6 +57,8 @@ Should you wish to force a default mode for when a user first visits the site, y
 ```html
 <x-dimmer::controls force-mode="dark" />
 ```
+
+<!-- [docs_end] -->
 
 ## Testing
 
